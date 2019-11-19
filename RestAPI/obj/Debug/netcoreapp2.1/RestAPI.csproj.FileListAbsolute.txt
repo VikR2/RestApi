@@ -1,0 +1,15 @@
+C:\Users\Ramins01\source\repos\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\RestAPI.csproj.CoreCompileInputs.cache
+C:\Users\Ramins01\source\repos\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\RestAPI.AssemblyInfoInputs.cache
+C:\Users\Ramins01\source\repos\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\RestAPI.AssemblyInfo.cs
+C:\Users\Ramins01\source\repos\RestAPI\RestAPI\bin\Debug\netcoreapp2.1\RestAPI.deps.json
+C:\Users\Ramins01\source\repos\RestAPI\RestAPI\bin\Debug\netcoreapp2.1\RestAPI.runtimeconfig.json
+C:\Users\Ramins01\source\repos\RestAPI\RestAPI\bin\Debug\netcoreapp2.1\RestAPI.runtimeconfig.dev.json
+C:\Users\Ramins01\source\repos\RestAPI\RestAPI\bin\Debug\netcoreapp2.1\RestAPI.dll
+C:\Users\Ramins01\source\repos\RestAPI\RestAPI\bin\Debug\netcoreapp2.1\RestAPI.pdb
+C:\Users\Ramins01\source\repos\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\RestAPI.csprojAssemblyReference.cache
+C:\Users\Ramins01\source\repos\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\RestAPI.RazorAssemblyInfo.cache
+C:\Users\Ramins01\source\repos\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\RestAPI.RazorAssemblyInfo.cs
+C:\Users\Ramins01\source\repos\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\RestAPI.RazorTargetAssemblyInfo.cache
+C:\Users\Ramins01\source\repos\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\RestAPI.dll
+C:\Users\Ramins01\source\repos\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\RestAPI.pdb
+C:\Users\Ramins01\source\repos\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
