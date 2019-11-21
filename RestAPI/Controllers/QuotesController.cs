@@ -21,11 +21,48 @@ namespace RestAPI.Controllers
         }
         // GET: api/Quotes
         [HttpGet]
-        public IActionResult Get()
+        [ResponseCache(Duration = 60, Location = ResponseCacheLocation.Client)]
+        public IActionResult Get(string sort)
         {
-            //return Ok(_quotesDbContext.Quotes);
-            return StatusCode(StatusCodes.Status200OK);
+            IQueryable<Quote> quotes;
 
+            switch (sort)
+            {
+                case "desc" :
+                    quotes = _quotesDbContext.Quotes.OrderByDescending(q => q.DateCreated);
+                    break;
+                case "asc":
+                    quotes = _quotesDbContext.Quotes.OrderBy(q => q.DateCreated);
+                    break;
+                default:
+                    quotes = _quotesDbContext.Quotes;
+                    break;
+            }
+            return Ok(quotes);
+            //return StatusCode(StatusCodes.Status200OK);
+
+        }
+
+        //pagination , skip records
+        [HttpGet("[action]")]
+        public IActionResult PagingQuote(int? pageNumber, int? pageSize)
+        {
+            var quotes = _quotesDbContext.Quotes;
+            var currentpageNumber = pageNumber ?? 1;
+            var currentpageSize = pageSize ?? 2;
+            /*
+             *pagenumber =2 , pagesize=10
+             * (2-1) * 10 = 10 ; that means skip the first 10 records
+             */
+            return Ok(quotes.Skip((currentpageNumber - 1 )* currentpageSize).Take(currentpageSize));
+        }
+
+        // Search Functionality
+        [HttpGet("[action]")]
+        public IActionResult SearchQuote(string type)
+        {
+           var quotes = _quotesDbContext.Quotes.Where(x => x.Type.StartsWith(type));
+            return Ok(quotes);
         }
 
         // GET: api/Quotes/5
@@ -68,6 +105,8 @@ namespace RestAPI.Controllers
                 entity.Title = quote.Title;
                 entity.Author = quote.Author;
                 entity.Description = quote.Description;
+                entity.Type = quote.Type;
+                entity.DateCreated = quote.DateCreated;
                 _quotesDbContext.SaveChanges();
                 return Ok("Record Updated ");
             }
